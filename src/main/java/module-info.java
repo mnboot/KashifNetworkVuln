@@ -1,4 +1,4 @@
-module com.forgepacket.forgepacket {
+module com.forgepacket.kashifVuln {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -9,6 +9,6 @@ module com.forgepacket.forgepacket {
     requires org.kordamp.ikonli.javafx;
     requires eu.hansolo.tilesfx;
 
-    opens com.forgepacket.forgepacket to javafx.fxml;
-    exports com.forgepacket.forgepacket;
+    opens com.forgepacket.kashifVuln to javafx.fxml;
+    exports com.forgepacket.kashifVuln;
 }
