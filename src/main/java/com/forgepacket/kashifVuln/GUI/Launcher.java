@@ -1,4 +1,4 @@
-package com.forgepacket.kashifVuln;
+package com.forgepacket.kashifVuln.GUI;
 
 import javafx.application.Application;
 

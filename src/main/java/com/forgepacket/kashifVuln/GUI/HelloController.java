@@ -1,4 +1,4 @@
-package com.forgepacket.kashifVuln;
+package com.forgepacket.kashifVuln.GUI;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
