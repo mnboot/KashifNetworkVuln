@@ -12,6 +12,6 @@ public class TestCalc {
     @Test
     public void testAddition(){
         Calc calc = new Calc();
-        Assertions.assertEquals(3, calc.add(1, 2));
+        Assertions.assertEquals(3, calc.add(1, 2), "Testing if 3 = 1+2");
     }
 }
