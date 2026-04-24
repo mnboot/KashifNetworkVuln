@@ -3,12 +3,12 @@
 
 GUI Packet creating/manipulating/observing software
 
-## story
+## Story
 
 This is a university project made by [Abdullah Al Salem University](https://aasu.edu.kw) students for our professor,
 Prof. Kashif.
 
-## Contribution:
+## Contribution
 
 For now, the project only allow specific AASU students to contribute <br/> If you are one of them:
 
