@@ -3,8 +3,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<VBox xmlns:fx="http://javafx.com/fxml/1" prefWidth="582.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25"
-      fx:controller="com.forgepacket.kashifVuln.GUI.CraftController">
+<VBox xmlns:fx="http://javafx.com/fxml/1" prefWidth="582.0" stylesheets="@style.css"
+      xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.forgepacket.kashifVuln.GUI.CraftController">
 
     <children>
         <HBox VBox.vgrow="ALWAYS">
@@ -24,10 +24,7 @@
                         <RowConstraints vgrow="NEVER"/>
                         <RowConstraints vgrow="NEVER"/>
                         <RowConstraints vgrow="NEVER"/>
-                        <RowConstraints vgrow="NEVER"/>
-                        <RowConstraints vgrow="NEVER"/>
-                        <RowConstraints vgrow="NEVER"/>
-                        <RowConstraints vgrow="NEVER"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER"/>
                         <RowConstraints vgrow="NEVER"/>
                     </rowConstraints>
 
@@ -39,36 +36,19 @@
                     <Label text="Protocol:" GridPane.rowIndex="0"/>
                     <Label text="Source:" GridPane.rowIndex="1"/>
                     <Label text="Dest:" GridPane.rowIndex="2"/>
-                    <Label text="Src Port:" GridPane.rowIndex="3"/>
-                    <Label text="Dst Port:" GridPane.rowIndex="4"/>
-                    <Label text="TTL:" GridPane.rowIndex="5"/>
-                    <Label text="Flags:" GridPane.rowIndex="6"/>
-                    <Label text="Payload (hex):" GridPane.rowIndex="7"/>
+                    <Label text="Payload (hex):" GridPane.rowIndex="4"/>
 
                     <!-- Inputs -->
                     <ComboBox fx:id="comboProto" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
 
-                    <TextField fx:id="txtSource" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-                    <TextField fx:id="txtDest" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-                    <TextField fx:id="txtSourcePort" maxWidth="Infinity" GridPane.columnIndex="1"
-                               GridPane.rowIndex="3"/>
-                    <TextField fx:id="txtDestinationPort" maxWidth="Infinity" GridPane.columnIndex="1"
-                               GridPane.rowIndex="4"/>
-                    <TextField fx:id="txtTTL" maxWidth="Infinity" text="64" GridPane.columnIndex="1"
-                               GridPane.rowIndex="5"/>
-
-                    <!-- Flags -->
-                    <HBox maxWidth="Infinity" spacing="6" GridPane.columnIndex="1" GridPane.rowIndex="6">
-                        <children>
-                            <CheckBox fx:id="chkSyn" text="SYN"/>
-                            <CheckBox fx:id="chkAck" text="ACK"/>
-                            <CheckBox fx:id="chkFin" text="FIN"/>
-                            <CheckBox fx:id="chkRst" mnemonicParsing="false" text="RST"/>
-                            <CheckBox fx:id="chkPsh" mnemonicParsing="false" text="PSH"/>
-                            <CheckBox fx:id="chkUrg" mnemonicParsing="false" text="URG"/>
-                        </children>
-                    </HBox>
-                    <TextArea prefHeight="76.0" prefWidth="469.0" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+                    <TextField fx:id="txtSource" maxWidth="Infinity" promptText="127.0.0.1" GridPane.columnIndex="1"
+                               GridPane.rowIndex="1"/>
+                    <TextField fx:id="txtDest" maxWidth="Infinity" promptText="8.8.8.8" GridPane.columnIndex="1"
+                               GridPane.rowIndex="2"/>
+                    <TextArea fx:id="txtHexPayload" prefHeight="76.0" prefWidth="469.0" promptText="43 45 F3 EE"
+                              GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                    <Label text="Length" GridPane.rowIndex="3"/>
+                    <TextField fx:id="txtLength" promptText="43" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 
                 </GridPane>
             </children>

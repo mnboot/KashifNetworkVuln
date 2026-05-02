@@ -14,8 +14,8 @@
                 <Label text="Start:"/>
                 <TextField fx:id="txtStart" text="1"/>
                 <Label text="End:"/>
-                <TextField fx:id="txtEnd" onDragDetected="#txtEnd" text="1024"/>
-                <Button mnemonicParsing="false" onAction="#ocStartScan" onMouseDragExited="#ocStartScan"
+                <TextField fx:id="txtEnd" text="1024"/>
+                <Button mnemonicParsing="false" onAction="#ocStartScan"
                         text="Start Scan"/>
             </children>
         </HBox>

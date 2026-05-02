@@ -21,6 +21,7 @@ public class MainController {
         setTabView(tapCapture, "CaptureController.fxml");
         setTabView(tapCraft, "CraftController.fxml");
         setTabView(tapScanner, "ScannerController.fxml");
+        setTabView(tapAnalyzer, "AnalyzeController.fxml");
     }
 
 
