@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" prefWidth="582.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25"
+      fx:controller="com.forgepacket.kashifVuln.GUI.CraftController">
+
+    <children>
+        <HBox VBox.vgrow="ALWAYS">
+            <children>
+                <GridPane hgap="8" vgap="5" HBox.hgrow="ALWAYS">
+
+                    <!-- Columns -->
+                    <columnConstraints>
+                        <!-- Labels (fixed) -->
+                        <ColumnConstraints hgrow="NEVER" minWidth="100"/>
+                        <!-- Inputs (grow) -->
+                        <ColumnConstraints hgrow="ALWAYS"/>
+                    </columnConstraints>
+
+                    <!-- Rows -->
+                    <rowConstraints>
+                        <RowConstraints vgrow="NEVER"/>
+                        <RowConstraints vgrow="NEVER"/>
+                        <RowConstraints vgrow="NEVER"/>
+                        <RowConstraints vgrow="NEVER"/>
+                        <RowConstraints vgrow="NEVER"/>
+                        <RowConstraints vgrow="NEVER"/>
+                        <RowConstraints vgrow="NEVER"/>
+                        <RowConstraints vgrow="NEVER"/>
+                    </rowConstraints>
+
+                    <padding>
+                        <Insets bottom="10" left="10" right="10" top="10"/>
+                    </padding>
+
+                    <!-- Labels -->
+                    <Label text="Protocol:" GridPane.rowIndex="0"/>
+                    <Label text="Source:" GridPane.rowIndex="1"/>
+                    <Label text="Dest:" GridPane.rowIndex="2"/>
+                    <Label text="Src Port:" GridPane.rowIndex="3"/>
+                    <Label text="Dst Port:" GridPane.rowIndex="4"/>
+                    <Label text="TTL:" GridPane.rowIndex="5"/>
+                    <Label text="Flags:" GridPane.rowIndex="6"/>
+                    <Label text="Payload (hex):" GridPane.rowIndex="7"/>
+
+                    <!-- Inputs -->
+                    <ComboBox fx:id="comboProto" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                    <TextField fx:id="txtSource" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    <TextField fx:id="txtDest" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                    <TextField fx:id="txtSourcePort" maxWidth="Infinity" GridPane.columnIndex="1"
+                               GridPane.rowIndex="3"/>
+                    <TextField fx:id="txtDestinationPort" maxWidth="Infinity" GridPane.columnIndex="1"
+                               GridPane.rowIndex="4"/>
+                    <TextField fx:id="txtTTL" maxWidth="Infinity" text="64" GridPane.columnIndex="1"
+                               GridPane.rowIndex="5"/>
+
+                    <!-- Flags -->
+                    <HBox maxWidth="Infinity" spacing="6" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                        <children>
+                            <CheckBox fx:id="chkSyn" text="SYN"/>
+                            <CheckBox fx:id="chkAck" text="ACK"/>
+                            <CheckBox fx:id="chkFin" text="FIN"/>
+                            <CheckBox fx:id="chkRst" mnemonicParsing="false" text="RST"/>
+                            <CheckBox fx:id="chkPsh" mnemonicParsing="false" text="PSH"/>
+                            <CheckBox fx:id="chkUrg" mnemonicParsing="false" text="URG"/>
+                        </children>
+                    </HBox>
+                    <TextArea prefHeight="76.0" prefWidth="469.0" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+                </GridPane>
+            </children>
+        </HBox>
+        <VBox prefHeight="0.0" prefWidth="582.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Separator prefWidth="200.0"/>
+            </children>
+        </VBox>
+        <HBox prefHeight="49.0" prefWidth="597.0" spacing="3.0">
+            <children>
+                <Button mnemonicParsing="false" text="Add layer"/>
+                <Button mnemonicParsing="false" text="Send"/>
+                <Button mnemonicParsing="false" text="Clear"/>
+            </children>
+        </HBox>
+        <Label text="Layer Stack:"/>
+        <ListView prefHeight="110.0" prefWidth="549.0"/>
+        <Label text="Hex Preview"/>
+        <TextArea disable="true" prefHeight="110.0" prefWidth="533.0" style="-fx-opacity: 0.9;"/>
+    </children>
+</VBox>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" prefHeight="238.0" prefWidth="219.0"
+      stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12"
+      fx:controller="com.forgepacket.kashifVuln.GUI.MainController">
+  <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+    <tabs>
+      <Tab fx:id="tapCapture" text="Capture">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+        </content>
+      </Tab>
+      <Tab fx:id="tapCraft" text="Craft">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+        </content>
+      </Tab>
+      <Tab fx:id="tapScanner" text="Scanner">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+        </content>
+      </Tab>
+      <Tab fx:id="tapAttack" text="Attack">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+        </content>
+      </Tab>
+      <Tab fx:id="tapAnalyzer" text="Analyzer">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+        </content>
+      </Tab>
+    </tabs>
+  </TabPane>
+</VBox>
